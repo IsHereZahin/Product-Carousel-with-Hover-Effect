@@ -7,7 +7,6 @@
 
 .product {
   position: relative;
-  overflow: hidden;
   padding: 20px;
 }
 
@@ -27,13 +26,27 @@
   width: 250px;
   height: 450px;
   margin-right: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 .product-image {
-  position: relative;
   width: 100%;
   height: 350px;
   overflow: hidden;
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  object-fit: cover;
 }
 
 .product-thumb {
@@ -50,9 +63,7 @@
 
 .product-short-description {
   width: 100%;
-  height: 20px;
-  line-height: 20px;
-  overflow: hidden;
+  text-overflow: ellipsis;
   opacity: 0.5;
   text-transform: capitalize;
   margin: 5px 0;
